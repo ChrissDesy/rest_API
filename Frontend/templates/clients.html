@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Client List</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  
+</head>
+
+<body>   
+        {% for message in get_flashed_messages() %} 
+    <div id="loginInfo" style="color: green;">
+        {{message}}
+    </div>
+    {%endfor%}
+   
+  <div class="wrapper">
+   
+        <h1><em style="color: white;">Registered Clients</em></h1>
+        <a href='/new'>
+            <button>Create New</button>
+        </a>
+        
+        <br><br>
+        <div class="table">
+      
+            <div class="row header blue">
+              <div class="cell">
+                Date of Birth
+              </div>
+              <div class="cell">
+                Gender
+              </div>
+              <div class="cell">
+                Patient ID
+              </div>
+              <div class="cell">
+                ID Number
+              </div>
+              <div class="cell">
+                First Name
+              </div>
+              <div class="cell">
+                Surname
+              </div>
+              <div class="cell">
+                Telephone
+              </div>
+            </div>
+            {%for record in data%}
+            <div class="row">
+                {%for k,v in record.items()%}
+              <div class="cell">
+                {{v}}
+              </div>
+              
+              {%endfor%}
+            </div>
+            {%endfor%}
+        </div>
+  </div>
+
+  
+</body>
+</html>

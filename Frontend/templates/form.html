@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" href="static/css/form.css">
+</head>
+ 
+<body>
+<h3>CLIENT REGISTRATION FORM</h3>
+
+<form action = "{{ url_for('save_client') }}" method = "POST" 
+    enctype = "multipart/form-data">
+<table align="center" cellpadding = "10">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="fname" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Last Name ---------------------------------------------------------->
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="sname" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Date Of Birth -------------------------------------------------------->
+<tr>
+<td>DATE OF BIRTH</td>
+ 
+<td>
+ <input type="date" name="dob">
+</td>
+</tr>
+ 
+<!----- Id Number---------------------------------------------------------->
+<tr>
+<td>ID Number</td>
+<td><input type="text" name="idnum" maxlength="100" /></td>
+</tr>
+ 
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="gender" value="Male" />
+Female <input type="radio" name="gender" value="Female" />
+</td>
+</tr>
+ 
+<!----- Tel Number ---------------------------------------------------------->
+<tr>
+<td>TELEPHONE</td>
+<td>
+<input type="text" name="tel" maxlength="10" />
+(10 digit number)
+</td>
+</tr>
+ 
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+ 
+</form>
+ 
+</body>
+</html>
